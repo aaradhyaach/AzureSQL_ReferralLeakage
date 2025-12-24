@@ -2,15 +2,20 @@ import os
 import pandas as pd
 from sqlalchemy import create_engine, text
 from tqdm import tqdm
+from dotenv import load_dotenv
 
-# --------- CONFIG ----------
-SERVER = "referrals-epic-portfolio.database.windows.net"
-DATABASE = "ReferralLeakageDB"
-USERNAME = "YOURUSER"   # often works best as user@YOURSERVERNAME (without .database.windows.net)
-PASSWORD = "YOURPASSWORD"
-CSV_DIR = "../data/csv"  # folder containing the synthea csvs
-SCHEMA = "raw"
-# ----------------------------------------
+load_dotenv()  # loads .env locally, if present
+
+SERVER = os.getenv("AZURE_SQL_SERVER")
+DATABASE = os.getenv("AZURE_SQL_DATABASE")
+USERNAME = os.getenv("AZURE_SQL_USERNAME")
+PASSWORD = os.getenv("AZURE_SQL_PASSWORD")
+CSV_DIR = os.getenv("CSV_DIR", "./data/csv")
+SCHEMA = os.getenv("SQL_SCHEMA", "raw")
+
+if not all([SERVER, DATABASE, USERNAME, PASSWORD]):
+    raise RuntimeError("Missing required env vars. Check your .env file.")
+
 
 def make_engine():
     # ODBC Driver 18 requires encryption; TrustServerCertificate can be set to yes for dev
