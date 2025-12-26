@@ -7,3 +7,13 @@ SELECT DB_NAME() AS CurrentDatabase;
 -- Check if there are any tables at all in this database
 SELECT name, type_desc 
 FROM sys.tables;
+
+
+SELECT COUNT(Id) FROM raw.claims;
+
+SELECT
+  DB_NAME() AS database_name,
+  SUM(size) * 8.0 / 1024 AS size_mb
+FROM sys.database_files;
+
+
