@@ -57,20 +57,14 @@ Interactive Power BI dashboards were then finally built to surface findings in a
 
 All metrics were validated through SQL-based reconciliation to ensure consistency between the source data and dashboard outputs.
 
-<aside>
-📄
-
-*Relevant DAX and the .pbix file containing the dashboards can be found in [Github](https://github.com/aaradhyaach/AzureSQL_ReferralLeakage).*
-
-</aside>
 
 **Dashboard 1 - Referral Delay Dashboard**
 
-![Screenshot 2026-01-07 200126.png](attachment:ebc9a633-06b4-43dd-a11d-9df60db778d8:Screenshot_2026-01-07_200126.png)
+<img width="1422" height="778" alt="image" src="https://github.com/user-attachments/assets/235e153c-76d5-461f-b648-0c2e974f95d8" />
 
 **Dashboard 2 - Downstream Claims Dashboard**
 
-![image.png](attachment:31ede653-41cc-4704-8f4f-e6466bfef2e2:image.png)
+<img width="1422" height="778" alt="image" src="https://github.com/user-attachments/assets/62f1313f-3e5c-46bc-979f-7efa6ab073af" />
 
 ---
 
@@ -80,9 +74,9 @@ All metrics were validated through SQL-based reconciliation to ensure consistenc
 
 The analysis shows that overall referral scheduling performance is strong, with the majority of referrals progressing through the workflow efficiently. Approximately **97% of referrals were scheduled within 7 days**, indicating that baseline scheduling processes are functioning well for most patients. Funnel analysis confirmed minimal drop-off between referral order, scheduling, and visit completion for the majority of cases.
 
-![image.png](attachment:78c5f131-578c-4afb-8b00-84a0cc3db16b:image.png)
+<img width="1422" height="554" alt="image" src="https://github.com/user-attachments/assets/6e9c5645-9231-43ed-8e18-de47c3a7920a" />
 
-![image.png](attachment:a0cf6fb4-eed1-405c-8413-f818ff593363:image.png)
+<img width="1442" height="754" alt="image" src="https://github.com/user-attachments/assets/a4609d8a-a88a-4239-843e-35a03e2faee6" />
 
 However, despite strong average performance, a **small but meaningful subset of referrals experienced extended delays or were never scheduled**. Referrals delayed **14 days or more accounted for approximately 2.65% of total referral volume**, yet represented nearly all scheduling-related access risk. Delays beyond 30 days formed a distinct long-tail population, highlighting where scheduling breakdowns persist.
 
@@ -90,17 +84,17 @@ However, despite strong average performance, a **small but meaningful subset of 
 
 Aging and cumulative distribution analysis demonstrated that **access risk is driven by long-tail delays rather than system-wide inefficiency**. While most referrals met access targets quickly, referrals exceeding the 14-day threshold consistently accounted for the majority of at-risk cases. This pattern indicates that improvements targeted toward delayed referrals would yield greater impact than broad workflow changes affecting all referrals.
 
-![image.png](attachment:ed68cf6d-c3d6-44e8-8146-da9c1beec80a:image.png)
+<img width="1374" height="586" alt="image" src="https://github.com/user-attachments/assets/569730bf-63b8-4c2a-8a85-2d9823012480" />
 
 ### **4.3 Downstream Claims and Utilization Impact**
 
 Linking referral workflows to downstream claims revealed a clear relationship between scheduling timeliness and follow-up utilization. Referrals scheduled within access targets were substantially more likely to generate downstream claims, while referrals with extended scheduling delays showed reduced claim conversion and longer time to first claim.
 
-![image.png](attachment:2ec0bf18-6852-4ac7-b8bb-d1dea40e55db:image.png)
+<img width="1294" height="580" alt="image" src="https://github.com/user-attachments/assets/85dc03ac-a7ed-4fc1-a523-4696da50758e" />
 
 Referrals classified as at risk generated **fewer downstream claims on average** and were **disproportionately represented among referrals with no associated claims**, suggesting potential utilization loss tied to scheduling delays. These findings indicate that access delays do not stop at scheduling but can propagate into reduced follow-up activity.
 
-![image.png](attachment:c1f776b7-6c5a-40d5-8f40-3b5363935717:image.png)
+<img width="1304" height="552" alt="image" src="https://github.com/user-attachments/assets/5ba1e75e-3f6e-427d-9179-0cbe248a4e19" />
 
 ### **4.4 Business Impact and Operational Implications**
 
