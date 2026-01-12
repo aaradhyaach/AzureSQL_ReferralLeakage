@@ -37,7 +37,7 @@ Referral workflow performance was analyzed by tracking referrals from order plac
 
 The proxy referral workflow was defined as follows:
 
-![Screenshot 2026-01-07 195010.png](attachment:9c2c1dc0-17e7-49ed-89cc-05838473dae1:Screenshot_2026-01-07_195010.png)
+<img width="1422" height="854" alt="image" src="https://github.com/user-attachments/assets/eab1fbae-6f5f-4002-97e4-879d22af5dad" />
 
 Using this proxy workflow, key timestamps were used to calculate the number of days from referral order to scheduling, which served as the primary access performance metric. **Referrals were grouped into operationally meaningful aging buckets aligned with access thresholds, with referrals delayed 14 days or more classified as at risk.**
 
